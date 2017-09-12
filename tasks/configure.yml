@@ -1,0 +1,17 @@
+---
+- name: Enable TRIM
+  become: true
+  shell: yes | trimforce enable
+  when: macos_ssd.trim
+
+- name: Enable Sudden Motion Sensor
+  become: true
+  shell: pmset -a sms 1
+  when: macos_ssd.sms
+
+- name: Set no access time
+  become: true
+  copy:
+    src: com.noatime.plist
+    dest: "{{ macos_ssd.noatime_plist }}"
+  when: macos_ssd.noatime

@@ -1,0 +1,11 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  vars:
+    DEBUG: true
+    macos_ssd:
+      trim: true
+      sms: true
+      noatime: true
+  roles:
+    - ansible-macos-ssd

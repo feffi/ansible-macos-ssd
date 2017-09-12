@@ -1,0 +1,13 @@
+---
+macos_ssd:
+  # Enable TRIM. See http://en.wikipedia.org/wiki/TRIM
+  trim: false
+
+  # Enable Sudden Motion Sensor technology. See https://en.wikipedia.org/wiki/Sudden_Motion_Sensor
+  sms: false
+
+  # Disable file access time. See https://en.wikipedia.org/wiki/Access_time
+  noatime: false
+
+  # where to set the noatime
+  noatime_plist: "/Library/LaunchDaemons/com.noatime.plist"
