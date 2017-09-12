@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Kevin Wennemuth
-  description: A ansible role to setup a macOS hostname, smb name, netbios.
+  description: A Ansible role to optimize _only_ non Apple SSDs.
   license: MIT
   min_ansible_version: 2.3
   platforms:

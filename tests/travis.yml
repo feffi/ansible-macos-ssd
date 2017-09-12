@@ -4,7 +4,7 @@
   vars:
     DEBUG: true
     macos_ssd:
-      trim: true
+      trim: false
       sms: true
       noatime: true
   roles:
