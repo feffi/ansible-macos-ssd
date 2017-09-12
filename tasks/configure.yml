@@ -11,7 +11,25 @@
 
 - name: Set no access time
   become: true
-  copy:
-    src: com.noatime.plist
-    dest: "{{ macos_ssd.noatime_plist }}"
   when: macos_ssd.noatime
+  blockinfile:
+      path: "{{ macos_ssd.noatime_plist }}"
+      block: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+        "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+        <plist version="1.0">
+        <dict>
+        <key>Label</key>
+        <string>com.noatime</string>
+        <key>ProgramArguments</key>
+        <array>
+        <string>mount</string>
+        <string>-uwo</string>
+        <string>noatime</string>
+        <string>/</string>
+        </array>
+        <key>RunAtLoad</key>
+        <true/>
+        </dict>
+        </plist>
