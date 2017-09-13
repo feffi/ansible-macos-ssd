@@ -14,6 +14,11 @@
   when: macos_ssd.noatime
   blockinfile:
       path: "{{ macos_ssd.noatime_plist }}"
+      state: present
+      create: true
+      owner: root
+      group: wheel
+      mode: "u=rw,g=r,o=r"
       block: |
         <?xml version="1.0" encoding="UTF-8"?>
         <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
