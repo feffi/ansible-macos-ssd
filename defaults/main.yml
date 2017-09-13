@@ -9,5 +9,5 @@ macos_ssd:
   # Disable file access time. See https://en.wikipedia.org/wiki/Access_time
   noatime: false
 
-  # where to set the noatime
+  # Where to put the daemon to set the noatime
   noatime_plist: "/Library/LaunchDaemons/com.noatime.plist"
