@@ -8,4 +8,4 @@
       sms: true
       noatime: true
   roles:
-    - ansible-macos-ssd
+    - { role: ansible-macos-ssd }
