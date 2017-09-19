@@ -11,4 +11,9 @@ galaxy_info:
   galaxy_tags:
     - system
     - osx
+    - macos
+    - harddrive
+    - disk
+    - trim
+    - ssd
 dependencies: []
